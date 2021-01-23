@@ -1,8 +1,7 @@
 import React, {useState} from 'react';
 import { useSpring, animated } from "react-spring"
-import Toggle from "./Toggle"
+import Routes from "./Routes"
 import Nav from "./Nav"
-import Checkout from "./Checkout"
 import logo from './logo.svg';
 import './App.css';
 
@@ -20,18 +19,15 @@ const App = () => {
     opacity: 1
   });
 
-  console.log(fade)
-
     return (
       <animated.div className="App" style={fade}>
         <header className="App-header">
           <img src={logo} className="logo" />
           <button onClick={() => setNavOpen(!isNavOpen)} className="menu-button">Menu</button>
-          {/* <Nav style={navAnimation}/> */}
+          <Nav style={navAnimation}/>
         </header>
         <main>
-          <Toggle />
-          <Checkout isOpen={isNavOpen} />
+          <Routes />
         </main>
       </animated.div>
     );

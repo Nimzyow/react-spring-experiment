@@ -4,6 +4,7 @@ import { useSpring, animated } from "react-spring"
 import Nav from "./Nav"
 import Modal from "./Modal"
 import logo from './logo.svg';
+import Accordion from "./Accordion"
 import './App.css';
 import Checkout from './Checkout';
 
@@ -32,6 +33,7 @@ const App = () => {
           {/* <Routes /> */}
           <Checkout isOpen={isNavOpen} />
           <Modal/>
+          <Accordion />
         </main>
       </animated.div>
     );

@@ -5,6 +5,7 @@ import Nav from "./Nav"
 import Modal from "./Modal"
 import logo from './logo.svg';
 import Accordion from "./Accordion"
+import Gesture from "./Gesture"
 import Waypoints from "./Waypoints"
 import './App.css';
 import Checkout from './Checkout';
@@ -26,7 +27,6 @@ const App = () => {
     return (
       <animated.div className="App" style={fade}>
         <header className="App-header">
-          <img src={logo} className="logo" />
           <button onClick={() => setNavOpen(!isNavOpen)} className="menu-button">Menu</button>
           {/* <Nav style={navAnimation}/> */}
         </header>
@@ -35,7 +35,8 @@ const App = () => {
           <Checkout isOpen={isNavOpen} />
           <Modal/>
           <Accordion />
-          <Waypoints />
+          <Gesture />
+          {/* <Waypoints /> */}
         </main>
       </animated.div>
     );

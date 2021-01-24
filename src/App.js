@@ -9,6 +9,7 @@ import Gesture from "./Gesture"
 import Waypoints from "./Waypoints"
 import './App.css';
 import Checkout from './Checkout';
+import Boxes from './Boxes';
 
 const App = () => {
   const [isNavOpen, setNavOpen] = useState(false)
@@ -25,7 +26,7 @@ const App = () => {
   });
 
     return (
-      <animated.div className="App" style={fade}>
+      <animated.div className="App" >
         <header className="App-header">
           <button onClick={() => setNavOpen(!isNavOpen)} className="menu-button">Menu</button>
           {/* <Nav style={navAnimation}/> */}
@@ -35,7 +36,7 @@ const App = () => {
           <Checkout isOpen={isNavOpen} />
           <Modal/>
           <Accordion />
-          <Gesture />
+          <Boxes />
           {/* <Waypoints /> */}
         </main>
       </animated.div>
